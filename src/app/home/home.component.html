@@ -1,0 +1,136 @@
+
+<div >
+    <mat-toolbar color="primary" class="example-toolbar" >
+      <!-- <button class="sidebutton" mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button> -->
+ 
+ <!-- here is image     -->
+     <img class="logo" src="./assets/pngtree-pizza-house-tomato-pizza-png-image_5570273.jpg" alt="no image found"><span style="margin-left: 10px;"><h2 style="font-family:Audiowide, sans-serif ;">Pizza <span class="wordart"></span></h2></span>
+     <!-- search  -->
+     <input class="search"  placeholder="search"  >
+      
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>mic</mat-icon>
+    </button>
+
+<h1 style="font-size: 30px;margin-left: 400px; padding-right: 10px;">|</h1>
+<!-- login style -->
+
+    <mat-icon style="margin-left: 5px ;margin-right: 5px;">account_circle</mat-icon>
+    <a routerLink="login" style="color: white; text-decoration: none;">
+    <span class="link"><p style="font-size:small ;margin-top:17px ">My account</p>
+    <p style="font-size:small ;margin-top: -30px;">login|signup</p></span>
+</a>
+   <!-- cart -->
+   <a  routerLink="cart" style="color: white; text-decoration: none;margin-top: 5px ;margin-left: 15px;" (click)="getdata()" >
+
+     <span   matBadge="{{badgecount}}"  matBadgeSize="small" matBadgeColor="accent" matBadgePosition="before"> <mat-icon class="link" style="margin-left:5px ; width: 40px; margin-top: 7px;">shopping_cart</mat-icon></span>
+</a>
+    </mat-toolbar>
+  <!-- toolbar -->
+
+  <!-- side nav of no use here  -->
+    <mat-sidenav-container class="example-sidenav-container"
+                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list>
+   
+        </mat-nav-list>
+      </mat-sidenav>
+  <!-- end of side nav -->
+      <mat-sidenav-content style="background-color: white; color: black;">
+ <!-- content -->
+ <mat-grid-list class="grid" cols="3" rowHeight="2:1.2"  style=" background-color: white;">
+ 
+  <mat-grid-tile><mat-card  class="example-card , card1" style=" background-image:url('./assets/1c81d038febf06fd0d298143a1ee4add.jpg') ;">
+    <mat-card-title>Chicago Pizza.</mat-card-title>
+    <h3><b>Price:</b><i><b> 500/-</b> </i></h3>
+   
+    
+  <mat-card-actions class="button">
+   <br><br>
+
+    <span style="display:grid; grid-area: auto;" class="button2" >  <button mat-raised-button color="accent"  (click)="onclick(0)">Add to cart</button></span>
+ 
+   <span style="display:grid;" ><button style=" min-width: 110px; "  mat-raised-button color="warn"  (click)="remove(0)">remove item</button></span>
+ 
+  </mat-card-actions>
+</mat-card></mat-grid-tile>
+<!-- ========================================== -->
+
+  <mat-grid-tile><mat-card class="example-card , card2" style=" background-image:url('./assets/combo.png') ;">
+    <mat-card-title>Sicilian Pizza.</mat-card-title>
+    <h3><b>Price:</b><i><b> 300/-</b> </i></h3>
+   <br><br>
+    
+  <mat-card-actions class="button">
+   
+    <span style="display:grid; " class="button2">  <button mat-raised-button color="accent"  (click)="onclick(1)">Add to cart</button></span>
+ 
+    <span style="display:grid;" ><button style=" min-width: 110px; "  mat-raised-button color="warn"  (click)="remove(1)">remove item</button></span>
+    
+  </mat-card-actions>
+</mat-card></mat-grid-tile>
+<!-- ============================================ -->
+<mat-grid-tile><mat-card class="example-card , card3" style=" background-image:url('./assets/meat-sausage-pizza-sisig-super-special-hawaiian-supreme-heart-valentine-hot-beef-mushrooms-combo-table-set-top-view-fast-food-240701243.jpg') ;">
+  <mat-card-title> Greek Pizza.</mat-card-title>
+  <h3><b>Price:</b><i><b> 550/-</b> </i></h3>
+ <br><br>
+  
+<mat-card-actions class="button">
+  <span style="display:grid; " class="button2">  <button mat-raised-button color="accent"  (click)="onclick(2)">Add to cart</button></span>
+ 
+  <span style="display:grid;" ><button style=" min-width: 110px; "  mat-raised-button color="warn"  (click)="remove(2)">remove item</button></span>
+</mat-card-actions>
+</mat-card></mat-grid-tile>
+<!-- ============================================================= -->
+<mat-grid-tile><mat-card class="example-card , card4" style=" background-image:url('./assets/istockphoto-1349560406-170667a.jpg') ;">
+  <mat-card-title>Cheese Dominor.</mat-card-title>
+  <h3><b>Price:</b><i><b> 500/-</b> </i></h3>
+ <br><br>
+  
+<mat-card-actions class="button">
+ 
+  <span style="display:grid; " class="button2">  <button mat-raised-button color="accent"  (click)="onclick(3)">Add to cart</button></span>
+ 
+  <span style="display:grid;" ><button style=" min-width: 110px; "  mat-raised-button color="warn"  (click)="remove(3)">remove item</button></span>
+</mat-card-actions>
+</mat-card></mat-grid-tile>
+<!-- ================================================== -->
+<mat-grid-tile><mat-card class="example-card , card5" style=" background-image:url('./assets/pizza-6752464.jpg') ;">
+  <mat-card-title>New York-Style Pizza.</mat-card-title>
+  <h3><b>Price:</b><i><b> 750/-</b> </i></h3>
+ <br><br>
+  
+<mat-card-actions class="button">
+ 
+  <span style="display:grid; " class="button2">  <button mat-raised-button color="accent"  (click)="onclick(4)">Add to cart</button></span>
+ 
+  <span style="display:grid;" ><button style=" min-width: 110px; "  mat-raised-button color="warn"  (click)="remove(4)">remove item</button></span>
+</mat-card-actions>
+</mat-card></mat-grid-tile>
+<!-- ============================================================ -->
+
+<mat-grid-tile><mat-card class="example-card , card6" style=" background-image:url('./assets/photo-1513104890138-7c749659a591.jpeg') ;">
+  <mat-card-title>Detroit Pizza.</mat-card-title>
+  <h3><b>Price:</b><i><b> 900/-</b> </i></h3>
+ <br><br>
+  
+<mat-card-actions class="button">
+ 
+  <span style="display:grid; " class="button2">  <button mat-raised-button color="accent"  (click)="onclick(5)">Add to cart</button></span>
+ 
+  <span style="display:grid;" ><button style=" min-width: 110px; "  mat-raised-button color="warn"  (click)="remove(5)">remove item</button></span>
+</mat-card-actions>
+</mat-card></mat-grid-tile>
+
+</mat-grid-list>
+
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+ 
+

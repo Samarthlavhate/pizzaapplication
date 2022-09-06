@@ -1,0 +1,34 @@
+
+
+.example-container .mat-form-field{
+    margin-left: 8px;
+}
+
+.outer-container{
+    margin-top: 5vh;
+    margin-left: 40vh;
+    padding: 100px;
+    background-color: black;
+}
+.search{
+    width: 225px;
+    height: 20px;
+    margin-left: 230px;
+}
+.logo{
+    width:75px;
+    height: 60px;
+    margin-left: 20px;
+    border-radius: 100%;
+}
+
+.regdiv{
+    animation-fill-mode: forwards;
+      animation-timing-function:ease-out;
+      animation-duration: 1s;
+      animation-name: login
+  }
+  @keyframes login {
+    from{opacity: .2;  transform:translatey(100%)}
+    to{opacity: 1;  transform:translatex(0%) ;}
+  }

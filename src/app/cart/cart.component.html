@@ -1,0 +1,59 @@
+
+
+<div style="background-image: url('./assets/final.jpeg'); background-size:cover; width:auto; height: 660px;" >
+
+    <mat-toolbar color="primary" class="example-toolbar" >
+        <!-- <button class="sidebutton" mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button> -->
+    
+    <!-- here is image     -->
+    <img class="logo" src="./assets/pngtree-pizza-house-tomato-pizza-png-image_5570273.jpg" alt="no image found"><span style="margin-left: 10px; "><a routerLink="/" style="color: aliceblue; text-decoration: none;"><h2 style="font-family:Audiowide, sans-serif ;">Pizza House</h2></a></span>
+       <!-- search  -->
+       <input class="search"  placeholder="search">
+        
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>search</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>mic</mat-icon>
+      </button>
+    
+    <h1 style="font-size: 30px;margin-left: 400px; padding-right: 10px;">|</h1>
+    <!-- login style -->
+    
+      <mat-icon style="margin-left: 5px; margin-right: 5px;">account_circle</mat-icon>
+      <a routerLink="login" style="color: white; text-decoration: none;">
+      <span><p style="font-size:small ;margin-top:17px ">My account</p>
+      <p style="font-size:small ;margin-top: -30px;">login|signup</p></span>
+    </a>
+     <!-- cart -->
+     <a routerLink="cart" style="color: white; text-decoration: none;margin-top: 5px ;margin-left: 15px;">
+      
+      
+    
+        
+      
+       <span   matBadge="{{recdata.food.length}}"  matBadgeSize="small" matBadgeColor="accent" matBadgePosition="before"> <mat-icon style="margin-left:5px ; width: 40px; margin-top: 7px;">shopping_cart</mat-icon></span>
+    </a>
+      </mat-toolbar>
+    
+
+
+
+<table style="margin-left: 250px; margin-top: 75px;">
+    <h1 style="margin-left: 100px; margin-top: 10px;"><b>OrderId: {{recdata.orderId}}</b></h1>
+    <tr>
+        
+      <th><b>Food item</b></th>
+      <th class="th1"><b>Food Price</b></th>
+      
+    </tr>
+    <tr *ngFor="let x of recdata.food">
+  
+        <td>{{x.foodName}}</td>
+      <td class="th1">{{x.foodPrice}}</td>
+     
+    </tr>
+  </table>
+  <button (click)="press()" style="background-color: green; margin-left: 365px; margin-top: 10px;" mat-raised-button color="primary"><b>Order now</b></button>
+  
+</div>

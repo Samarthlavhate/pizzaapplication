@@ -1,0 +1,162 @@
+.search{
+    width: 225px;
+    height: 20px;
+    margin-left: 230px;
+}
+.logo{
+    width:75px;
+    height: 60px;
+    margin-left: 20px;
+    border-radius: 100%;
+}
+.example-card{
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    width: 310px;
+    height: 150px;
+    transition: card ,1s;
+    
+}
+.example-card:hover{
+    width: 350px;
+    height: 185px;
+}
+
+.example-toolbar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation-timing-function: linear;
+    animation-duration: .5s;
+    animation-name: toolbar
+    
+
+}
+
+@keyframes toolbar{
+    from{ transform: translatey(-100%);}
+    to{   transform: translatey(0);}
+}
+.button{
+margin-left:215px;
+/* margin-top: 50px; */
+
+}
+.button2{
+    margin-top: 10px;
+    margin-right: -7px;
+   
+}
+.link{
+    transition: color,2s ;
+}
+.link:hover{
+color:greenyellow
+}
+
+.card3{
+    animation-fill-mode: forwards;
+    visibility:hidden;
+    animation-delay: .6s;
+    animation-timing-function:ease-out;
+    animation-duration: 1s;
+    animation-name: card1
+    
+
+}
+@keyframes card3 {
+    from{ transform: translatex(-100%); visibility:hidden;}
+    to{   transform: translatex(0); visibility: visible;  }
+}
+.card2{
+    animation-fill-mode: forwards;
+    visibility:hidden;
+    animation-delay: 1.3s;
+    animation-timing-function:ease-out;
+    animation-duration: 1s;
+    animation-name: card1
+    
+
+}
+
+@keyframes card2 {
+    from{ transform: translatex(-100%); visibility:hidden;}
+    to{   transform: translatex(0); visibility: visible;  }
+}
+.card1{
+    animation-fill-mode: forwards;
+    visibility:hidden;
+    animation-delay: 1.9s;
+    animation-timing-function:ease-out;
+    animation-duration: 1s;
+   
+    animation-name: card1
+    
+
+}
+@keyframes card1 {
+    from{ transform: translatex(-100%); visibility:hidden;}
+    to{   transform: translatex(0); visibility: visible; }
+}
+
+/* ======================================================== */
+.card6{
+    animation-fill-mode: forwards;
+    visibility:hidden;
+    animation-delay: .6s;
+    animation-timing-function:ease-out;
+    animation-duration: 1s;
+    animation-name: card1
+    
+
+}
+@keyframes card6 {
+    from{ transform: translatex(-100%); visibility:hidden;}
+    to{   transform: translatex(0); visibility: visible;  }
+}
+.card5{
+    animation-fill-mode: forwards;
+    visibility:hidden;
+    animation-delay: 1.3s;
+    animation-timing-function:ease-out;
+    animation-duration: 1s;
+    animation-name: card1
+    
+
+}
+
+@keyframes card5 {
+    from{ transform: translatex(-100%); visibility:hidden;}
+    to{   transform: translatex(0); visibility: visible;  }
+}
+.card4{
+    animation-fill-mode: forwards;
+    visibility:hidden;
+    animation-delay: 1.9s;
+    animation-timing-function:ease-out;
+    animation-duration: 1s;
+    animation-name: card1
+    
+
+}
+@keyframes card4 {
+    from{ transform: translatex(-100%); visibility:hidden;}
+    to{   transform: translatex(0); visibility: visible;  }
+}
+
+.wordart:after {
+    animation-fill-mode: forwards;
+    content:"house";
+    animation: wordart 3s linear infinite;
+    color: chartreuse;
+  }
+@keyframes wordart {
+    0% {content: "house"; }
+ 50%  { content:"brand";}
+ 100%  { content:"lover";}
+    
+ 
+  }
+
+

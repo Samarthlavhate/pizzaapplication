@@ -1,0 +1,26 @@
+.logincard{
+   
+  margin-top: -1500px;
+   
+}
+.search{
+  width: 225px;
+  height: 20px;
+  margin-left: 230px;
+}
+.logo{
+  width:75px;
+  height: 60px;
+  margin-left: 20px;
+  border-radius: 100%;
+}
+.logdiv{
+  animation-fill-mode: forwards;
+    animation-timing-function:ease-out;
+    animation-duration: 1s;
+    animation-name: login
+}
+@keyframes login {
+  from{opacity: .2;  transform:translatey(100%)}
+  to{opacity: 1;  transform:translatex(0%) ;}
+}

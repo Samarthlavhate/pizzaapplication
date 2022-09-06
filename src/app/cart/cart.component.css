@@ -1,0 +1,30 @@
+.logincard{
+   
+  margin-top: -1500px;
+   
+}
+.search{
+  width: 225px;
+  height: 20px;
+  margin-left: 230px;
+}
+.logo{
+  width:75px;
+  height: 60px;
+  margin-left: 20px;
+  border-radius: 100%;
+}
+
+  table, th, td {
+    border: 1px solid black;}
+    tr:nth-child(even) {
+        background-color: #D6EEEE;}
+        
+        th, td {
+            text-align: left;
+            padding: 8px;
+            padding-right: 15px;
+          }
+          .th1{
+            text-align: center;
+          }

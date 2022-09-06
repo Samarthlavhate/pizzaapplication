@@ -1,0 +1,61 @@
+<div class ="logdiv" style= " background-image: url('./assets/pizzabg.jpg'); background-size:cover; padding-bottom: 213px; ">
+  <!-- form body css here -->
+  <mat-toolbar color="primary" class="example-toolbar" >
+    <!-- <button class="sidebutton" mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button> -->
+
+<!-- here is image     -->
+<img class="logo" src="./assets/pngtree-pizza-house-tomato-pizza-png-image_5570273.jpg" alt="no image found"><span style="margin-left: 10px; "><a routerLink="/" style="color: aliceblue; text-decoration: none;"><h2 style="font-family:Audiowide, sans-serif ;">Pizza House</h2></a></span>
+   <!-- search  -->
+   <input class="search"  placeholder="search">
+    
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>search</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>mic</mat-icon>
+  </button>
+
+<h1 style="font-size: 30px;margin-left: 400px; padding-right: 10px;">|</h1>
+<!-- login style -->
+
+  <mat-icon style="margin-left: 5px;margin-right: 5px;">account_circle</mat-icon>
+  <a routerLink="login" style="color: white; text-decoration: none;">
+  <span><p style="font-size:small ;margin-top:17px ">My account</p>
+  <p style="font-size:small ;margin-top: -30px;">login|signup</p></span>
+</a>
+ <!-- cart -->
+ <a routerLink="cart" style="color: white; text-decoration: none;margin-top: 5px ;margin-left: 15px;">
+  
+  
+
+    
+  
+   <span   matBadge="0"  matBadgeSize="small" matBadgeColor="accent" matBadgePosition="before"> <mat-icon style="margin-left:5px ; width: 40px; margin-top: 7px;">shopping_cart</mat-icon></span>
+</a>
+  </mat-toolbar>
+<!-- form -->
+
+  <form [formGroup]="profileForm" (ngSubmit)="onsubmit()" style="margin-left: 450px; width: 400px; margin-top: 100px;">
+<div class="example-container" style=" padding-top: 50px;">
+    <mat-form-field appearance="fill" style="margin-left: 100px; width: 300px;" color="accent" >
+      <mat-label>Enter your userName</mat-label>
+      <input matInput placeholder="Enter your userName" formControlName="user" [(ngModel)]="myuser.userName" style="padding-right:100px ;">
+      <mat-error *ngIf="getusername().errors?.['required']"> can not be empty </mat-error>
+    
+    </mat-form-field>
+
+ <br>
+ <mat-form-field appearance="fill" style="margin-left: 100px; width: 300px;">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="pass" [(ngModel)]="myuser.password">
+      <mat-error *ngIf="getpassword().errors?.['required']">cannot be empty </mat-error>
+    </mat-form-field> 
+    <br>
+    <button mat-raised-button color="accent" type="submit" [disabled]="profileForm.invalid"   style=" margin-left:225px;">Singin</button>
+ <br>
+    <br>
+    <button mat-raised-button color="primary" routerLink="/register"   style=" margin-left:200px;">Create account</button>
+ 
+</div>
+</form>
+</div>
